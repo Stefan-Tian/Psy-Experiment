@@ -20,7 +20,7 @@ male_seq = randperm(40);
 female_seq = randperm(40);
 
 % loop through random sequence of photos
-[w, rect] = Screen('OpenWindow', 0, [256, 256, 256], [0 0 1200 800]);
+[w, rect] = Screen('OpenWindow', 0, [256, 256, 256], [0 0 1500 900]);
 
 rt_1 = []; keynames_1 = [];
 rt_2 = []; keynames_2 = [];
@@ -130,6 +130,14 @@ for n = order
                     rt_2 = [rt_2 keyTime - tStart];
                     keynames_2 = [keynames_2 keyPressed];
                 end
+            else
+                if (q == 1)
+                    rt_1 = [rt_1 999];
+                    keynames_1 = [keynames_1 999];
+                else
+                    rt_2 = [rt_2 999];
+                    keynames_2 = [keynames_2 999];
+                end
             end
             % some time between questions
             WaitSecs(.2);
@@ -165,6 +173,7 @@ ListenChar(1)
 
 GetClicks;
 Screen('Close', w);
+
 
 
 
