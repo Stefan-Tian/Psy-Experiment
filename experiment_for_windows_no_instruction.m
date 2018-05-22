@@ -29,7 +29,7 @@ image = zeros(rect(4),rect(3));
 t1= Screen('MakeTexture',w, image);
 Screen('TextSize',t1,20);
 Screen('TextFont',t1,'Kaiti'); 
-DrawFormattedText(t1,double('接下來您會看到一系列由人工智慧系統評分外貌以及社經地位較高的照片。'),'center',350,255);
+DrawFormattedText(t1,double('接下來將出現一系列男生/女生的照片。'),'center',350,255);
 DrawFormattedText(t1,double('請您依據照片人像的外貌好感度及其可能的社經地位去做1-7的評分。'),'center', 375,255); 
 DrawFormattedText(t1,double('7表示好感度最高及社經地位最高；'),'center', 400, 255); 
 DrawFormattedText(t1,double('1表示好感度最低及社經地位最低。'),'center', 425,255); 
